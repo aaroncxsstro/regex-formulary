@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+<title>Formulario de alta</title>
+<!-- Etiquetas de adaptación del contenido -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- Enlace externo a un documento de estilos CSS -->
+<link rel="stylesheet" href="./estilos.css" type="text/css">
+</head>
+<body>
+<div id="contenedor">
+<h2>Formulario de alta</h2>
+<form method="post" action="#">
+<ul>
+<li class="izquierda">
+<label class="titulo" for="nombre">Nombre y apellidos <span class="requerido">*</span></label>
+<div>
+<span class="completo">
+<input id="nombre" name="nombre" value="" pattern="[a-zA-Z]{1,15}" required>
+<label for="nombre">Nombre</label>
+</span>
+<span class="completo">
+<input id="apellido1" name="apellido1" value="" pattern="[a-zA-Z]{1,15}" required>
+<label for="apellido1">Primer apellido</label>
+</span>
+<span class="completo">
+<input id="apellido2" name="apellido2" value="" pattern="[a-zA-Z]{1,15}" required>
+<label for="apellido2">Segundo apellido</label>
+</span>
+<span class="completo">
+<input id="fechanac" name="fechanac" value="" type="date">
+<label for="fechanac">Fecha de nacimiento</label>
+</span>
+</div>
+<p class="ayuda">No te olvides de escribir también tu segundo apellido</p>
+</li>
+<li class="derecha">
+<label class="titulo" for="direccion">Dirección <span class="requerido">*</span></label>
+<div>
+<span class="completo">
+<input id="direccion" name="direccion" value="" pattern="[a-zA-Z1-9]{1,30}" required>
+<label for="direccion">Calle, número, piso, puerta</label>
+</span>
+<span class="tercio">
+<input id="codigopostal" name="codigopostal" value="" pattern="[1-9]{5}" required>
+<label for="codigopostal">Código postal</label>
+</span>
+<span class="dostercios">
+<input id="municipio" name="municipio" value="" pattern="[a-zA-Z]{1,20}" required>
+<label for="municipio">Municipio</label>
+</span>
+<span class="tercio">
+<select id="provincia" name="provincia" required>
+<option value=""></option>
+<option value="provincia1">Provincia 1</option>
+<option value="provincia2">Provincia 2</option>
+<option value="provincia3">Provincia 3</option>
+</select>
+<label for="provincia">Provincia</label>
+</span>
+<span class="dostercios">
+<select id="pais" name="pais" required>
+<option value=""></option>
+<option value="pais1">España</option>
+<option value="pais2">Fuera de España</option>
+</select>
+<label for="pais">País</label>
+</span>
+</div>
+<p class="ayuda">El código postal es imprescindible para poder recibir los pedidos</p>
+</li>
+<li class="izquierda">
+<label class="titulo" for="email">Email</label>
+<div>
+<span class="completo">
+<input id="email" name="email" value="" type="email">
+</span>
+</div>
+<p class="ayuda">Asegúrate de que sea válido</p>
+</li>
+<li class="derecha">
+<label class="titulo" for="telefonofijo">Teléfono <span class="requerido">*</span></label>
+<div>
+<span class="mitad">
+<input id="telefonofijo" name="telefonofijo" value="XXXXXXXXX" pattern="[1-9]{1,9}" required>
+<label for="telefonofijo">Fijo</label>
+</span>
+<span class="mitad">
+<input id="telefonomovil" name="telefonomovil" value="XXXXXXXXX" pattern="[1-9]{1,9}" required>
+<label for="telefonomovil">Móvil</label>
+</span>
+</div>
+<p class="ayuda">Sin prefijo de país y sin espacios en blanco</p>
+</li>
+<li class="botones">
+<input id="alta" type="submit" value="Darme de alta →">
+</li>
+</ul>
+</form>
+</div>
+
+</body></html>
